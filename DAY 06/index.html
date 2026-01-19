@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COURSE REGISTRATION FORM</title>
+  </head>
+  <body>
+    <h1>COURSE REGISTRATION FORM</h1>
+    <form action="/register" method="post">
+      <fieldset style="width: 500px">
+        <legend>Personal Details</legend>
+
+        <table>
+          <tr>
+            <td>
+              <label for="name">Name:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="EX: Ayesha "
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="email">Email:</label>
+            </td>
+            <td>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="EX: ayesha@example.com"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="password">Password:</label>
+            </td>
+            <td>
+              <input type="password" id="password" name="password" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="confirm_password">Confirm Password:</label>
+            </td>
+            <td>
+              <input
+                type="password"
+                id="confirm_password"
+                name="confirm_password"
+                required
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label for="phone">Phone Number:</label>
+            </td>
+            <td>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="[0-9]{10}"
+                required
+                placeholder="EX: 1234567890"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="DOB">Date of Birth:</label>
+            </td>
+            <td>
+              <input
+                type="date"
+                id="DOB"
+                name="DOB"
+                required
+                placeholder="DD/MM/YYYY"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="Age">Age:</label>
+            </td>
+            <td>
+              <input
+                type="number"
+                id="Age"
+                name="Age"
+                required
+                min="18"
+                max="100"
+                placeholder="EX: 18"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label for="GENDER">Gender:</label>
+            </td>
+            <td>
+              <input type="radio" id="male" name="GENDER" value="male" />
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="GENDER" value="female" />
+              <label for="female">Female</label>
+              <input type="radio" id="other" name="GENDER" value="other" />
+              <label for="other">Other</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="country">Select country:</label>
+            </td>
+            <td>
+              <select id="country" name="country" required>
+                <option value="">Select a country</option>
+                <option value="USA">United States</option>
+                <option value="IND">India</option>
+                <option value="UK">United Kingdom</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label for="feedback">Feedback:</label>
+            </td>
+            <td>
+              <textarea
+                id="feedback"
+                name="feedback"
+                rows="4"
+                cols="30"
+                placeholder="Enter your feedback here..."
+              ></textarea>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Submit" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset style="width: 500px">
+        <legend>Course Details</legend>
+        <table>
+          <tr>
+            <td>
+              <label for="course">Select Course:</label>
+            </td>
+            <td>
+              <select id="course" name="course" required>
+                <option value="">Select a course</option>
+                <option value="web_dev">Java Full stackWeb Development</option>
+                <option value="data_science">Data Science</option>
+                <option value="cyber_security">Cyber Security</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="mode">Mode of Learning:</label>
+            </td>
+            <td>
+              <input
+                type="checkbox"
+                id="online"
+                name="mode"
+                value="online"
+                required
+              />
+              <label for="online">Online</label>
+              <input
+                type="checkbox"
+                id="offline"
+                name="mode"
+                value="offline"
+                required
+              />
+              <label for="offline">Offline</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="start_date">Preferred Start Date:</label>
+            </td>
+            <td>
+              <input type="date" id="start_date" name="start_date" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="additional_info">Additional Information:</label>
+            </td>
+            <td>
+              <textarea
+                id="additional_info"
+                name="additional_info"
+                rows="4"
+                cols="30"
+                placeholder="Any additional information..."
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Register" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset style="width: 500px">
+        <legend>Additional Input Types(For Teaching)</legend>
+        <table>
+          <tr>
+            <td><label for="website">Website URL:</label></td>
+            <td>
+              <input
+                type="url"
+                id="website"
+                name="website"
+                placeholder="https://example.com"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="search">Search:</label></td>
+            <td>
+              <input
+                type="search"
+                id="search"
+                name="search"
+                placeholder="Search..."
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="age">Age (with limits 18-60):</label>
+            </td>
+            <td>
+              <input
+                type="number"
+                id="age"
+                name="age"
+                min="18"
+                max="60"
+                placeholder="18-60"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="Experience">Experienced level(range 1-10):</label>
+            </td>
+            <td>
+              <input
+                type="range"
+                id="Experience"
+                name="Experience"
+                min="1"
+                max="10"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="time">Preferred Time:</label></td>
+            <td>
+              <input type="time" id="time" name="time" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="datetime"> Interview Date and Time:</label></td>
+            <td>
+              <input type="datetime-local" id="datetime" name="datetime" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="file">Upload Supporting Document:</label>
+            </td>
+            <td>
+              <input type="file" id="file" name="file" />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="color">Favorite Color:</label></td>
+            <td>
+              <input type="color" id="color" name="color" value="#ff0000" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="Specialization">Specialization:</label>
+            </td>
+            <td>
+              <input
+                list="specializations"
+                id="Specialization"
+                name="Specialization"
+                placeholder="--select--"
+              />
+              <datalist id="specializations">
+                <option value="Frontend Development"></option>
+                <option value="Backend Development"></option>
+                <option value="Full Stack Development"></option>
+                <option value="Data Science"></option>
+                <option value="Cyber Security"></option>
+              </datalist>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="reset" value="Reset" />
+              <input type="submit" value="Submit" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+  </body>
+</html>
