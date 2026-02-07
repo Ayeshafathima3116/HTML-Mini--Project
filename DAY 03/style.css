@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #4ecdc4;
+    --accent-color: #ffe66d;
+    --bg-color: #1a1a2e;
+    --text-color: #ecf0f1;
+    --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    color: transparent;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: fadeInDown 1s ease-out;
+}
+
+h1 mark,
+h2 mark {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+h1 ins,
+h2 ins {
+    text-decoration: none;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* List Styling */
+ol,
+ul,
+dl {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px 40px;
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ol:hover,
+ul:hover,
+dl:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+}
+
+strong {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 10px;
+    transition: color 0.3s ease;
+}
+
+li:hover {
+    color: var(--primary-color);
+    cursor: default;
+}
+
+/* Definition List specific */
+dt {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #bdc3c7;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted var(--secondary-color);
+    text-decoration: none;
+    cursor: help;
+    color: var(--secondary-color);
+}
+
+/* Nested lists */
+ol li ul {
+    background: rgba(0, 0, 0, 0.2);
+    margin: 15px 0;
+    box-shadow: none;
+    padding: 20px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

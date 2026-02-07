@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">AF.DEV</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#" class="resume-btn" download>Download Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="video-container">
+            <!-- Background video placeholder - using a generic video source or black background if not available -->
+            <video autoplay muted loop id="bg-video">
+                <source
+                    src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-abstract-shapes-40176-large.mp4"
+                    type="video/mp4">
+            </video>
+        </div>
+        <div class="header-overlay">
+            <h1>PATHAN AYESHA FATHIMA</h1>
+            <p>Creative Java Full Stack Web Designer & Developer</p>
+            <button class="cta-btn">View My Work</button>
+        </div>
+    </header>
+
+    <section id="about" class="theme-about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="content-wrapper">
+                <div class="about-img-box">
+                    <img src="MY-profile.jpeg" alt="Profile" class="profile-img">
+                </div>
+                <div class="about-text">
+                    <p>I am a passionate developer with a keen eye for detail and a love for creating intuitive, dynamic
+                        user experiences. My approach blends technical expertise with creative problem-solving.</p>
+                    <p>With years of experience in modern web technologies, I specialize in crafting professional
+                        interfaces that resonate with users and drive engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="theme-skills">
+        <div class="container">
+            <h2 class="section-title">My Technical Stack</h2>
+            <div class="skills-grid-box">
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <span>React JS</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="theme-projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-list">
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
+                        alt="Project 1">
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A high-performance online store with seamless user interface and secure integration.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+                        alt="Project 2">
+                    <div class="project-info">
+                        <h3>Data Analytics Dashboard</h3>
+                        <p>Real-time visualization of complex data metrics for business intelligence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ayesha Fathima. Crafted with precision.</p>
+    </footer>
+</body>
+
+</html>

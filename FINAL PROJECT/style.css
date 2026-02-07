@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #0ea5e9;
+    --primary-dark: #0284c7;
+    --accent: #f59e0b;
+    --bg-main: #0f172a;
+    --bg-surface: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --glass: rgba(15, 23, 42, 0.8);
+    --border: rgba(255, 255, 255, 0.1);
+    --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --grad-primary: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+    --grad-hero: radial-gradient(circle at top right, #1e293b, #0f172a);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+}
+
+.logo h1 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    background: var(--grad-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+    padding: 180px 0 100px;
+    background: var(--grad-hero);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: var(--primary);
+    filter: blur(150px);
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(14, 165, 233, 0.1);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    border-radius: 50px;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-title span {
+    background: var(--grad-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--grad-primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-main);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--primary);
+}
+
+/* ========== STATS SECTION ========== */
+.stats {
+    padding: 60px 0;
+    margin-top: -60px;
+    position: relative;
+    z-index: 10;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.stat-card {
+    background: var(--bg-surface);
+    padding: 40px 20px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid var(--border);
+    box-shadow: var(--card-shadow);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* ========== COMMON SECTION STYLES ========== */
+section {
+    padding: 100px 0;
+}
+
+.section-tag {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.grid {
+    display: grid;
+    gap: 30px;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* ========== ABOUT SECTION ========== */
+.about-card {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    background: var(--bg-surface);
+    padding: 60px;
+    border-radius: 30px;
+    border: 1px solid var(--border);
+    align-items: center;
+}
+
+.about-image {
+    text-align: center;
+}
+
+.about-image img {
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.about-icons {
+    font-size: 1.5rem;
+    background: rgba(14, 165, 233, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    color: var(--primary);
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.about-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.feature-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    border: 1px solid var(--border);
+}
+
+/* ========== CARDS ========== */
+.feature-card,
+.app-card,
+.project-card {
+    background: var(--bg-surface);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+    box-shadow: var(--card-shadow);
+}
+
+.feature-card:hover,
+.app-card:hover,
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+}
+
+/* ========== APPLICATIONS ========== */
+.app-card {
+    text-align: center;
+    padding: 30px;
+}
+
+.app-icon {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.app-card b {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.app-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* ========== PROJECTS ========== */
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.project-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: gap 0.3s;
+}
+
+.project-link:hover {
+    gap: 10px;
+}
+
+/* ========== TRAINER SECTION ========== */
+.trainer-card {
+    background: var(--grad-primary);
+    padding: 80px;
+    border-radius: 40px;
+    text-align: center;
+    color: white;
+}
+
+.trainer-card .section-tag {
+    color: rgba(255, 255, 255, 0.824);
+}
+
+.trainer-avatar {
+    font-size: 5rem;
+    background: rgba(255, 255, 255, 0.1);
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.trainer-bio {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.trainer-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.t-stat b {
+    display: block;
+    font-size: 1.8rem;
+}
+
+/* ========== CTA SECTION ========== */
+.cta {
+    background: var(--grad-hero);
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+/* ========== SHOWCASE ========== */
+.showcase-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--bg-surface);
+    padding: 50px;
+    border-radius: 30px;
+    text-align: center;
+    border: 1px solid var(--border);
+}
+
+.showcase-img img {
+    height: 80px;
+    margin-bottom: 25px;
+}
+
+.showcase-card p {
+    margin-bottom: 30px;
+    color: var(--text-muted);
+}
+
+/* ========== MAP & VIDEO ========== */
+.map-container,
+.video-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--bg-surface);
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--card-shadow);
+}
+
+.map-container iframe,
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.back-to-top {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.back-to-top a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.footer p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .stats-grid,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .trainer-stats {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+}

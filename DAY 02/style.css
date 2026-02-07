@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(10, 10, 30);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Title Styling with Animation */
+.title {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #dd28e7, #15fa3f, #dd28e7);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 3s linear infinite;
+  text-shadow: 0 0 20px rgba(221, 40, 231, 0.5);
+  margin: 50px auto;
+  padding: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  width: 80%;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Intro Section */
+.intro {
+  font-size: 18px;
+  text-align: center;
+  margin: 0 auto 50px;
+  background: rgba(255, 255, 255, 0.05);
+  /* Glassmorphism */
+  backdrop-filter: blur(10px);
+  padding: 20px 40px;
+  border-radius: 15px;
+  max-width: 800px;
+  color: #aaddff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.intro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Sub-titles */
+.sub-title {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: 36px;
+  margin: 40px 0 30px;
+  color: #15fa3f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sub-title::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 3px;
+  background: #dd28e7;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Headings (Song Titles) */
+.headings {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  color: #fff;
+  margin: 20px auto;
+  padding: 10px 20px;
+  width: 80%;
+  max-width: 800px;
+  background: linear-gradient(90deg, rgba(221, 40, 231, 0.1), transparent);
+  border-left: 5px solid #dd28e7;
+  border-radius: 0 10px 10px 0;
+  transition: all 0.3s ease;
+}
+
+.headings:hover {
+  background: linear-gradient(90deg, rgba(221, 40, 231, 0.2), transparent);
+  padding-left: 30px;
+}
+
+.headings mark {
+  background: transparent;
+  color: #15fa3f;
+  text-shadow: 0 0 5px rgba(21, 250, 63, 0.5);
+  font-weight: bold;
+}
+
+/* Audio Player */
+.audio-controls {
+  width: 80%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto 40px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(118, 225, 61, 0.3);
+  filter: drop-shadow(0 0 5px rgba(118, 225, 61, 0.2));
+}
+
+/* Video & Images */
+video,
+img {
+  display: block;
+  margin: 0 auto 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  max-width: 90%;
+}
+
+video:hover,
+img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(221, 40, 231, 0.4);
+}
+
+/* Quotes/Subtext */
+.sub {
+  font-size: 18px;
+  text-align: center;
+  margin: 0 auto 30px;
+  font-style: italic;
+  color: #ffa500;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+/* Content Paragraphs */
+.content {
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: justify;
+  margin: 0 auto 60px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 40px;
+  border-radius: 20px;
+  color: #e0e0e0;
+  width: 90%;
+  max-width: 900px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.content strong {
+  color: #dd28e7;
+  font-size: 1.1em;
+}
+
+/* Horizontal Rule */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #555, transparent);
+  margin: 50px 0;
+}
+
+/* Footer Element */
+.final {
+  text-align: center;
+  font-size: 28px;
+  background: linear-gradient(90deg, #ff8c00, #ff0080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 50px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+
+  100% {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+}
+
+/* Abbreviations */
+abbr {
+  text-decoration: none;
+  color: #15fa3f;
+  cursor: help;
+  border-bottom: 1px dotted #15fa3f;
+}

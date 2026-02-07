@@ -1,113 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AYESHA-PORTFOLIO</title>
-  </head>
-  <body>
-    <h1><mark>AYESHA FATHIMA-JAVA FULL STACK DEVELOPER</mark></h1>
-    <p>
-      Welcome to my portfolio! Use the navigation below to explore my projects
-      and skills.
-    </p>
-    <ul>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#Projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li>
-        <a href="./AYESHA_RESUME (1).pdf" target="_blank" download="AYESHA "
-          >Download Resume</a
-        >
-      </li>
-    </ul>
-    <h2 id="about"><mark>About Me</mark></h2>
-    <p>
-      I’m focused on learning, building, and improving through iteration. I like
-      exploring new tools, solving problems, and turning ideas into something
-      real. I’m curious, detail-oriented, and always looking for better ways to
-      approach a challenge.
-    </p>
-    <p>
-      <a href="https://github.com/AyeshaFathima3116" target="_blank"
-        >VISIT MY GITHUB</a
-      >
-    </p>
-    <h2 id="skills"><mark>Skills</mark></h2>
-    <ul>
-      <li>Java</li>
-      <li>Spring Boot</li>
-      <li>HTML/CSS/JavaScript</li>
-      <li>React</li>
-      <li>SQL/NoSQL Databases</li>
-      <li>RESTful APIs</li>
-    </ul>
-    <h2><mark>Learning Goals</mark></h2>
-    <ol>
-      <li>
-        Master advanced Java concepts and frameworks.
-        <ul>
-          <li>NEXT JS</li>
-          <li>ANGULAR</li>
-        </ul>
-      </li>
-      <li>Build scalable web applications using Spring Boot and React.</li>
-      <li>Enhance my understanding of database management and optimization.</li>
-      <li>Contribute to open-source projects to gain real-world experience.</li>
-    </ol>
-    <h2 id="Projects"><mark>Projects</mark></h2>
-    <ul>
-      <li><a href="/DAY 02/index.html">Project 1: Multimedia Blogs</a></li>
-      <li><a href="/DAY 03/index.html">Project 2: LIfe Stages</a></li>
-      <li><a href="/DAY 04/index.html">Project 3: Tmetable Creation</a></li>
-    </ul>
-    <h2 id="contact"><mark>Contact Me</mark></h2>
-    <ul>
-      <li>
-        Email:<a href="mailto:pathanayeshafathima@gmail.com"
-          >pathanayeshafathima@gmail.com</a
-        >
-      </li>
-      <li>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/ayesha-fathima3116/"
-          >Ayesha Fathima</a
-        >
-      </li>
-      <li>
-        GitHub:
-        <a href="https://github.com/AyeshaFathima3116">Ayesha Fathima</a>
-      </li>
-      <li>Phone: <a href="tel:+91 8688523832">+91 8688523832</a></li>
-    </ul>
-    <h4>Thank you for visiting my portfolio!</h4>
-    <a href="https://www.linkedin.com/in/ayesha-fathima3116" target="_blank"
-      ><img
-        src="https://cdn-icons-png.flaticon.com/128/3991/3991775.png"
-        height="50px"
-        width="50px"
-    /></a>
-    <a href="https://github.com/AyeshaFathima3116" target="_blank"
-      ><img
-        src="https://cdn-icons-png.flaticon.com/128/733/733553.png"
-        height="50px"
-        width="50px"
-    /></a>
-    <a
-      href="https://www.instagram.com/thecalm_hustler3?igsh=MXJpa2Z5eTFueXhwdQ=="
-      target="_blank"
-      ><img
-        src="https://cdn-icons-png.flaticon.com/128/174/174855.png"
-        height="50px"
-        width="50px"
-    /></a>
 
-    <a href="#">
-      <img
-        src="https://cdn-icons-png.flaticon.com/128/14035/14035529.png"
-        height="50px"
-        width="50px"
-    /></a>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayesha Fathima | Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container container-header">
+      <div class="header-main">
+        <h1 class="header-name">Ayesha <span>Fathima</span></h1>
+        <p class="header-tagline">Java Full Stack Developer</p>
+        <p class="header-welcome">Welcome to my portfolio! Explore my projects and skills below.</p>
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="./AYESHA_RESUME (1).pdf" target="_blank" class="btn-download" download="AYESHA_Fathima_Resume">
+              Download Resume
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-card">
+        <p>
+          I’m focused on learning, building, and improving through iteration. I like exploring new tools, solving
+          problems, and turning ideas into something real. I’m curious, detail-oriented, and always looking for better
+          ways to approach a challenge.
+        </p>
+        <a href="https://github.com/AyeshaFathima3116" target="_blank" class="link-external">Visit My GitHub →</a>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="grid grid-skills">
+        <div class="skill-card">Java</div>
+        <div class="skill-card">Spring Boot</div>
+        <div class="skill-card">HTML/CSS/JS</div>
+        <div class="skill-card">React</div>
+        <div class="skill-card">SQL/NoSQL</div>
+        <div class="skill-card">REST APIs</div>
+      </div>
+    </section>
+
+    <!-- Learning Goals Section -->
+    <section class="section">
+      <h2 class="section-title">Learning Goals</h2>
+      <div class="goals-container">
+        <ol class="goals-list">
+          <li>
+            <strong>Master Advanced Java</strong>
+            <ul class="sub-goals">
+              <li>Next.js Framework</li>
+              <li>Angular Ecosystem</li>
+            </ul>
+          </li>
+          <li>Build scalable web applications using Spring Boot and React.</li>
+          <li>Enhance database management and optimization skills.</li>
+          <li>Contribute to open-source project environments.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="grid grid-projects">
+        <a href="/DAY 02/index1.html" class="project-card">
+          <span class="p-num">01</span>
+          <h3>Multimedia Blogs</h3>
+        </a>
+        <a href="/DAY 03/index2.html" class="project-card">
+          <span class="p-num">02</span>
+          <h3>Life Stages</h3>
+        </a>
+        <a href="/DAY 04/index3.html" class="project-card">
+          <span class="p-num">03</span>
+          <h3>Timetable Creator</h3>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h2 class="section-title">Let's Connect</h2>
+      <div class="contact-grid">
+        <a href="mailto:pathanayeshafathima@gmail.com" class="contact-item">Email Me</a>
+        <a href="https://www.linkedin.com/in/ayesha-fathima3116/" target="_blank" class="contact-item">LinkedIn</a>
+        <a href="https://github.com/AyeshaFathima3116" target="_blank" class="contact-item">GitHub</a>
+        <a href="tel:+918688523832" class="contact-item">Call Me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container container-footer">
+      <p class="footer-msg">Thank you for visiting!</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ayesha-fathima3116" target="_blank" title="LinkedIn"><img
+            src="https://cdn-icons-png.flaticon.com/128/3991/3991775.png" alt="LinkedIn" /></a>
+        <a href="https://github.com/AyeshaFathima3116" target="_blank" title="GitHub"><img
+            src="https://cdn-icons-png.flaticon.com/128/733/733553.png" alt="GitHub" /></a>
+        <a href="https://www.instagram.com/thecalm_hustler3/" target="_blank" title="Instagram"><img
+            src="https://cdn-icons-png.flaticon.com/128/174/174855.png" alt="Instagram" /></a>
+        <a href="#" class="top-jump" title="Back to Top"><img
+            src="https://cdn-icons-png.flaticon.com/128/14035/14035529.png" alt="Back to Top" /></a>
+      </div>
+      <p class="copyright">&copy; 2026 Ayesha Fathima. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
 </html>
