@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    --primary: #0ea5e9;
-    --primary-dark: #0284c7;
-    --accent: #f59e0b;
-    --bg-main: #0f172a;
-    --bg-surface: #1e293b;
+    --primary: #a82323;
+    --primary-dark: #280905;
+    --accent: #d4af37;
+    --bg-main: #120404;
+    --bg-surface: #280905;
     --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --glass: rgba(15, 23, 42, 0.8);
-    --border: rgba(255, 255, 255, 0.1);
-    --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --grad-primary: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
-    --grad-hero: radial-gradient(circle at top right, #1e293b, #0f172a);
+    --text-muted: #a0a0a0;
+    --glass: rgba(40, 9, 5, 0.85);
+    --border: rgba(212, 175, 55, 0.2);
+    --card-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8);
+    --grad-primary: linear-gradient(135deg, #a82323 0%, #280905 100%);
+    --grad-hero: radial-gradient(circle at top right, #280905, #120404);
 }
 
 * {
@@ -136,7 +136,8 @@ h3 {
     font-weight: 600;
     margin-bottom: 24px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    box-shadow: 0 0 15px rgba(168, 35, 35, 0.2);
 }
 
 .hero-title {
@@ -185,7 +186,7 @@ h3 {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 8px 30px rgba(168, 35, 35, 0.5);
 }
 
 .btn-outline {
@@ -335,8 +336,8 @@ section {
 .app-card:hover,
 .project-card:hover {
     transform: translateY(-10px);
-    border-color: var(--primary);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: var(--accent);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.1);
 }
 
 .feature-icon {
@@ -443,7 +444,8 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
 }
 
 .trainer-bio {
