@@ -1,82 +1,149 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap');
 
 :root {
-    --primary-color: #ff6b6b;
-    --text-color: #333;
-    --bg-color: #f7f9fc;
-    --card-bg: #fff;
+    --primary: #574964;
+    --primary-light: #7a6b8a;
+    --primary-dark: #3d3347;
+    --accent: #c9a96e;
+    --accent-light: #e0c99a;
+    --bg-main: #0e0b12;
+    --bg-surface: #1a1520;
+    --bg-card: #221c2a;
+    --text-main: #f0ecf4;
+    --text-muted: #9e95a8;
+    --border: rgba(87, 73, 100, 0.35);
+    --glass: rgba(87, 73, 100, 0.15);
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    --grad-primary: linear-gradient(135deg, #574964 0%, #3d3347 100%);
+    --grad-accent: linear-gradient(135deg, #c9a96e 0%, #e0c99a 100%);
+    --grad-hero: linear-gradient(180deg, #1a1520 0%, #0e0b12 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    margin: 0;
-    padding: 20px;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.7;
+    padding: 0;
     text-align: center;
 }
 
+/* ========== HERO HEADER ========== */
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: #2c3e50;
-    margin-bottom: 10px;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    padding: 80px 20px 10px;
+    background: var(--grad-hero);
+    letter-spacing: 1px;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--grad-accent);
+    margin: 20px auto 0;
+    border-radius: 2px;
 }
 
 body>p {
     font-size: 1.2rem;
-    color: #666;
+    color: var(--text-muted);
     margin-bottom: 40px;
+    padding: 10px 20px 0;
+    background: var(--bg-main);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Navigation Buttons */
+/* ========== QUICK NAV ========== */
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
 ul {
     list-style: none;
-    padding: 0;
-    margin-bottom: 50px;
+    padding: 0 20px;
+    margin-bottom: 60px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button {
     background: none;
     border: none;
     padding: 0;
+    cursor: pointer;
 }
 
 button a {
     display: inline-block;
-    padding: 12px 25px;
-    background: #fff;
-    color: #2c3e50;
+    padding: 12px 26px;
+    background: var(--bg-card);
+    color: var(--text-main);
     text-decoration: none;
-    border-radius: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     font-weight: 600;
-    transition: all 0.3s ease;
-    border: 1px solid #eee;
+    font-size: 0.9rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid var(--border);
+    letter-spacing: 0.5px;
 }
 
 button a:hover {
-    background: var(--primary-color);
+    background: var(--grad-primary);
+    background: var(--primary);
     color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(87, 73, 100, 0.4);
+    border-color: var(--primary-light);
 }
 
-/* Destination Cards */
+/* ========== DESTINATION SECTIONS ========== */
 h2 {
     margin-top: 60px;
     font-family: 'Playfair Display', serif;
-    color: #2c3e50;
+    font-size: 2rem;
+    color: var(--text-main);
     position: relative;
     display: inline-block;
+    padding: 0 20px;
 }
 
 h2 ins {
     text-decoration: none;
+    background: var(--grad-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.2rem;
+    font-weight: 700;
 }
 
 h2::after {
@@ -84,101 +151,240 @@ h2::after {
     display: block;
     width: 50%;
     height: 3px;
-    background: var(--primary-color);
-    margin: 10px auto;
+    background: var(--grad-accent);
+    margin: 12px auto;
+    border-radius: 2px;
 }
 
+body>p+h3~ul~h2,
+h2[id] {
+    scroll-margin-top: 30px;
+}
+
+/* Destination description text */
+h2+p,
+h2+p+img+br+h2+p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 750px;
+    margin: 0 auto 25px;
+    padding: 0 20px;
+    line-height: 1.8;
+}
+
+/* ========== IMAGES ========== */
 img {
-    width: 100%;
+    width: calc(100% - 40px);
     max-width: 800px;
     height: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    margin: 20px 0;
-    transition: transform 0.4s ease;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    margin: 20px auto;
+    display: block;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 2px solid var(--border);
 }
 
 img:hover {
-    transform: scale(1.02);
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: 0 25px 60px rgba(87, 73, 100, 0.3);
+    border-color: var(--accent);
 }
 
+/* ========== LOCATION HEADING ========== */
+/* The "Location" h2 subheadings */
+h2:not([id]) {
+    font-size: 1.3rem;
+    color: var(--primary-light);
+    margin-top: 30px;
+}
+
+h2:not([id]) ins {
+    font-size: 1.3rem;
+}
+
+h2:not([id])::after {
+    width: 30px;
+    height: 2px;
+    background: var(--primary-light);
+}
+
+/* ========== MAPS (IFRAMES) ========== */
 iframe {
-    width: 100%;
+    width: calc(100% - 40px);
     max-width: 800px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    margin-bottom: 40px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    margin: 15px auto 40px;
+    display: block;
+    border: 2px solid var(--border);
+    transition: border-color 0.3s ease;
 }
 
-/* Contact Form */
+iframe:hover {
+    border-color: var(--accent);
+}
+
+/* ========== HORIZONTAL RULE (DIVIDERS) ========== */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary-light), var(--accent), var(--primary-light), transparent);
+    margin: 70px auto;
+    width: 60%;
+    opacity: 0.5;
+}
+
+/* ========== CONTACT FORM ========== */
 form {
-    max-width: 600px;
-    margin: 60px auto;
+    max-width: 650px;
+    margin: 80px auto;
     text-align: left;
+    padding: 0 20px;
 }
 
 fieldset {
-    border: none;
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    transition: border-color 0.3s ease;
+}
+
+fieldset:hover {
+    border-color: var(--accent);
 }
 
 legend h2 {
     margin-top: 0;
-    border: none;
+    color: var(--accent);
+    font-size: 1.6rem;
+}
+
+legend h2::after {
+    display: none;
 }
 
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 2px solid #eee;
-    border-radius: 8px;
-    font-family: inherit;
-    transition: border-color 0.3s;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    background: var(--bg-surface);
+    color: var(--text-main);
+    transition: all 0.3s ease;
     box-sizing: border-box;
-    /* Fix width overflow */
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(201, 169, 110, 0.15);
+    background: var(--bg-main);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 
 input[type="submit"] {
-    background: var(--primary-color);
+    background: var(--grad-primary);
     color: white;
     border: none;
-    padding: 15px 30px;
-    border-radius: 8px;
+    padding: 16px 30px;
+    border-radius: 12px;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
     cursor: pointer;
     width: 100%;
-    transition: background 0.3s;
+    transition: all 0.4s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 6px 20px rgba(87, 73, 100, 0.3);
 }
 
 input[type="submit"]:hover {
-    background: #ff5252;
+    background: var(--accent);
+    color: var(--bg-main);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(201, 169, 110, 0.3);
 }
 
-hr {
-    border: none;
-    height: 1px;
-    background: #e1e4e8;
-    margin: 50px auto;
-    width: 80%;
+/* ========== SCROLLBAR ========== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-light);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.4rem;
+        padding-top: 50px;
+    }
+
+    h2 ins {
+        font-size: 1.6rem;
+    }
+
+    body>p {
+        font-size: 1rem;
+    }
+
+    fieldset {
+        padding: 30px 20px;
+    }
+
+    img,
+    iframe {
+        width: calc(100% - 30px);
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    ul {
+        gap: 8px;
+    }
+
+    button a {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+    }
 }
